@@ -8,7 +8,9 @@ $password = ConvertTo-SecureString $Initial_User_Password -AsPlainText -Force
 New-ADOrganizationalUnit -Name _USERS `
 -ProtectedFromAccidentalDeletion $false ### Only for lab purposes, an OU should normally be protected. ###
 
+# -- Change variable depending on individual use case -- #
 $User_First_Last_Names = Get-Content .\names.txt
+# ------------------------------------------------------ #
 
 # Creating a user account for each person/name on the list
 foreach ($name in $User_First_Last_Names) {
