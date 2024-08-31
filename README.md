@@ -18,7 +18,7 @@ We'll join the client VM to the domain and use one of the created accounts to lo
 
 ## Technologies Used
   - Oracle VirtualBox
-  - Microsoft Server 2019
+  - Microsoft Windows Server 2019
   - Microsoft Windows 10
   - Network Adapters / Network Interface Card (NIC)
   - Active Directory Domain Services (AD DS)
