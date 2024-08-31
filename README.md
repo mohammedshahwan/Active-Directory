@@ -1,7 +1,9 @@
-# On-Prem Active Directory Lab
+# On-Prem Active Directory Lab & Bulk User Creation with PowerShell
 
 ## Summary
-<!-- Add a diagram image here -->
+<div align="center">
+	<img src="https://github.com/mohammedshahwan/Active-Directory/blob/main/assets/ADDiagram.png">
+</div>
 
 In this lab, we're going to use Oracle VirtualBox to run a Windows Server 2019 and a Windows 10 VM. Our Server 19 VM will be our Domain Controller (DC) which will house Active Directory. It will have 2 network adapters, for the Internet as well as our internal network (which, in this case, will be through VirtualBox).
 
