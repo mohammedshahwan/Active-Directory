@@ -16,6 +16,12 @@ We will then use PowerShell to create users in Active Directory using our Bulk U
 With the setup complete on our DC, we'll create the client Windows 10 VM and set it up with an internal network adapter to connect with the DC VM through the private VirtualBox network.
 We'll join the client VM to the domain and use one of the created accounts to log in on the client VM, making sure the AD setup was successful.
 
+## Troubleshooting:
+
+Troubleshooting updates for issues that arise will be posted [here](https://github.com/mohammedshahwan/Active-Directory/blob/main/Troubleshooting.md).
+
+(Last updated: 10/31/2024)
+
 ## Technologies Used
   - Oracle VirtualBox
   - Microsoft Windows Server 2019
