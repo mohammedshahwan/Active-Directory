@@ -62,6 +62,8 @@ The IP addressing configuration I had previously set up was reverted to default?
 
 I reconfigured the IPv4 address/mask and DNS server address back to the original setup I had configured.
 
+(image of correct IPv4 settings)
+
 <br />
 
 I also took a look at the Remote Access Server (RAS) configurations to make sure if anything had changed on that end.
