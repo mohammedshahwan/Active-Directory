@@ -85,6 +85,8 @@ For safe measure, I also reconfigured the DHCP server, then went back to the cli
 
 <br />
 
+### Connection Issue: Solved
+
 When I logged back into the client machine, it began initializing as if it was the first time I was signing into the machine under the credentials I usually used (good sign?).
 
 The machine showed that it was connected to the internet, which meant the troubleshooting was a success.
