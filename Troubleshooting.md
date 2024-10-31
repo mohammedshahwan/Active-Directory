@@ -6,8 +6,10 @@ It's been a while since I got onto my AD home lab.
 I needed an isolated environment to run some programs and test "malware" mitigation techniques, so I decided to use the virtual setup of my AD home lab.
 
 ### CLIENT1 Machine wasn't connected to the internet?
-
-(image of client no internet) (image of no internet in settings)
+<div align="center">
+	<img width = "49%" src="https://github.com/mohammedshahwan/Active-Directory/blob/main/assets/Troubleshooting1/Trb1.png">
+  <img width = "49%" src="https://github.com/mohammedshahwan/Active-Directory/blob/main/assets/Troubleshooting1/Trb2.png">
+</div>
 
 When I logged into the domain controller account, everything appeared fine on the surface. I didn't want to go through setting up another domain controller machine if anything happened,
 so I decided to use the client machine since it would be easily replaceable.
@@ -20,7 +22,9 @@ I first tried performing a network reset to see if a simple fix could solve the 
 
 I then checked if the client machine was able to find the domain controller on the network:
 
-(image of initial ping test here)
+<div align="center">
+	<img src="https://github.com/mohammedshahwan/Active-Directory/blob/main/assets/Troubleshooting1/Trb3.png">
+</div>
 
 When I pinged the domain controller's IP address, the ping was successful, however, when I tried to ping the host domain itself, the client machine was unable to find it.
 
@@ -34,7 +38,10 @@ With this being the case, I figured the problem was on the domain controller end
 
 When I switched back to the domain controller I checked if the client machine was still registered with the Active Directory Users and Computers.
 
-(image of ad users and comp) (image of ad users and comp pop-up)
+<div align="center">
+	<img width = "49%" src="https://github.com/mohammedshahwan/Active-Directory/blob/main/assets/Troubleshooting1/Trb4.png">
+  <img width = "49%" src="https://github.com/mohammedshahwan/Active-Directory/blob/main/assets/Troubleshooting1/Trb5.png">
+</div>
 
 <br />
 
@@ -54,7 +61,9 @@ I then switched back to the domain controller and decided to check the internal/
 
 Their names were reverted back to Ethernet and Ethernet2, which I found suspicious. The external (internet-facing) network adapter seemed normal, other than the name, however, I found a problem on the internal (private network/domain hosting) network adapter.
 
-(image of internal IPv4 properties)
+<div align="center">
+	<img src="https://github.com/mohammedshahwan/Active-Directory/blob/main/assets/Troubleshooting1/Trb6.png">
+</div>
 
 <br />
 
@@ -62,7 +71,9 @@ The IP addressing configuration I had previously set up was reverted to default?
 
 I reconfigured the IPv4 address/mask and DNS server address back to the original setup I had configured.
 
-(image of correct IPv4 settings)
+<div align="center">
+	<img src="https://github.com/mohammedshahwan/Active-Directory/blob/main/assets/Troubleshooting1/Trb7.png">
+</div>
 
 <br />
 
@@ -80,9 +91,9 @@ The machine showed that it was connected to the internet, which meant the troubl
 
 For good measure, I pinged the domain host again and an external website, verifying that the proper connection configurations were re-established.
 
-(image of successful ping)
-
-
+<div align="center">
+	<img src="https://github.com/mohammedshahwan/Active-Directory/blob/main/assets/Troubleshooting1/Trb8.png">
+</div>
 
 
 
